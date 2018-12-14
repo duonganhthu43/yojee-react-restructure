@@ -1,0 +1,70 @@
+$prefix: "yoj";
+.#{$prefix}-notifications-feature {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  border: solid 1px #a7a7a7;
+
+  .ReactVirtualized__Grid__innerScrollContainer {
+    > div + div {
+      border-top: solid 1px #a7a7a7;
+    }
+  }
+
+  .#{$prefix}-notification-header {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom: solid 1px #a7a7a7;
+    background-color: #fcfcfc;
+
+    .#{$prefix}-title {
+      flex: 1;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 1.08;
+      color: #3b3b3b;
+    }
+
+    .#{$prefix}-link {
+      margin-right: 7px;
+      font-size: 10px;
+      line-height: 1.4;
+      color: #1c559e;
+      cursor: pointer;
+    }
+
+    .#{$prefix}-close {
+      padding: 0;
+      border: none;
+      opacity: 1;
+      cursor: pointer;
+
+      > i {
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        // background-image: url(../../assets/images/close.png);
+        background-size: 100%;
+      }
+    }
+  }
+
+  .#{$prefix}-notification-list {
+    flex: 1;
+
+    .#{$prefix}-non-ideal-state {
+      > * {
+        margin-bottom: 0;
+      }
+
+      .#{$prefix}-heading {
+        color: #a2a1a1;
+        font-size: 14px;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
